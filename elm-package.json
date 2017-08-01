@@ -2,7 +2,7 @@
     "version": "1.0.0",
     "summary": "Elm library containing L10n data, models and helper functions",
     "repository": "https://github.com/aherranz/elm-l10n.git",
-    "license": "BSD3",
+    "license": "MIT",
     "source-directories": [
         "src"
     ],
