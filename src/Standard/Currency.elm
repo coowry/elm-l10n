@@ -8,6 +8,7 @@ module Standard.Currency exposing (CurrencyCode, Currency, currency, symbol)
 
 # Lookup functions
 @docs currency
+@docs symbol
 
 -}
 
@@ -28,7 +29,7 @@ type alias Currency = { code : CurrencyCode
 
 {-| Get the symbol of the currency
 -}
-symbol : CurrencySymbol -> Maybe String
+symbol : CurrencyCode -> Maybe String
 symbol curr =
     case currency curr of
         Just curr -> curr.symbol
