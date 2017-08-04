@@ -1,4 +1,4 @@
-module Standard.Currency exposing (CurrencyCode, Currency, currency)
+module Standard.Currency exposing (CurrencyCode, Currency, currency, symbol)
 
 {-| Currency
 
@@ -24,6 +24,15 @@ type alias Currency = { code : CurrencyCode
                       , name : String
                       , native_name : Maybe String
                       , symbol : Maybe String }
+
+
+{-| Get the symbol of the currency
+-}
+symbol : CurrencySymbol -> Maybe String
+symbol curr =
+    case currency curr of
+        Just curr -> curr.symbol
+        Nothing -> Nothing
 
 
 {-| TODO
