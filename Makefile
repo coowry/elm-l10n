@@ -8,6 +8,10 @@ deps: node_modules
 build: node_modules
 	$(NPM)/elm-make
 
+# Why the custom PATH? https://github.com/elm-lang/elm-platform/issues/47
+repl: node_modules
+	@PATH=$(NPM):$(PATH) $(NPM)/elm-repl
+
 
 .PHONY: default get-deps build
 
