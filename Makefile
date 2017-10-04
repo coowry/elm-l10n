@@ -2,6 +2,9 @@ NPM := node_modules/.bin
 
 default: build
 
+deps: node_modules
+	# There are no third-party dependencies yet, skipped
+
 build: node_modules
 	$(NPM)/elm-make
 
@@ -17,7 +20,7 @@ pull:
 push: pull
 	git push --follow-tags origin master develop
 
-.PHONY: default get-deps build pull push
+.PHONY: default deps build pull push
 
 
 # Not phony
