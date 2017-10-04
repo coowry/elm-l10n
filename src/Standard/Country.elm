@@ -104,7 +104,7 @@ country code =
         "EG" -> Country "EG" "20" "Egypt" (Just "مصر") "EGP" "en"
         "EH" -> Country "EH" "212" "Western Sahara" Nothing "MAD" "en"
         "ER" -> Country "ER" "291" "Eritrea" (Just "إرتريا") "ERN" "en"
-        "ES" -> Country "ES" "34" "España" Nothing "EUR" "es"
+        "ES" -> Country "ES" "34" "Spain" (Just "España") "EUR" "es"
         "ET" -> Country "ET" "251" "Ethiopia" Nothing "ETB" "am"
         "FI" -> Country "FI" "358" "Finland" (Just "Suomi") "EUR" "en"
         "FJ" -> Country "FJ" "679" "Fiji" (Just "फ़िजी") "FJD" "fj"
