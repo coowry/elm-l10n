@@ -1,16 +1,24 @@
-module Standard.Country exposing (CountryCode, Country, country)
+module Standard.Country exposing (CountryCode, Country, country, pp)
 
 {-| Country
 
+
 # Definition
+
 @docs CountryCode
 @docs Country
 
+
 # Lookup functions
+
 @docs country
 
--}
 
+# Pretty-printing
+
+@docs pp
+
+-}
 
 import Standard.Currency exposing (CurrencyCode)
 import Standard.Language exposing (LanguageCode)
@@ -18,19 +26,39 @@ import Standard.Language exposing (LanguageCode)
 
 {-| Identifier of a country
 -}
-type alias CountryCode = String
+type alias CountryCode =
+    String
+
+
 {-| Identifier of a calling code
 -}
-type alias CallingCode = String
+type alias CallingCode =
+    String
+
 
 {-| TODO
 -}
-type alias Country = { code : CountryCode
-                     , cc : CallingCode
-                     , name : String
-                     , native_name : Maybe String
-                     , currency : CurrencyCode
-                     , language : CountryCode }
+type alias Country =
+    { code : CountryCode
+    , cc : CallingCode
+    , name : String
+    , native_name : Maybe String
+    , currency : CurrencyCode
+    , language : CountryCode
+    }
+
+
+{-| Pretty-print in the format "name (native_name)". Fall back to "name" if
+there is no native name available.
+-}
+pp : Country -> String
+pp country =
+    case country.native_name of
+        Nothing ->
+            country.name
+
+        Just native_name ->
+            country.name ++ " (" ++ native_name ++ ")"
 
 
 {-| TODO
