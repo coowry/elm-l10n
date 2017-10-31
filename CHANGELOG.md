@@ -2,6 +2,8 @@
 
 # Next release
 
+- FractionDigits in Currency
+
 # 1.0.4
 
 - Standard.Country exports pretty print (pp): native name and name.
