@@ -2,6 +2,8 @@
 
 # Next release
 
+# 1.0.5
+
 - FractionDigits in Currency
 
 # 1.0.4
