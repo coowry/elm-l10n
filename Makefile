@@ -1,6 +1,6 @@
 NPM := node_modules/.bin
 
-default: build
+default: test
 
 deps: node_modules
 	# There are no third-party dependencies yet, skipped
@@ -20,7 +20,10 @@ pull:
 push: pull
 	git push --follow-tags origin master develop
 
-.PHONY: default deps build pull push
+test: build
+	$(NPM)/elm-test
+
+.PHONY: default deps build pull push test
 
 
 # Not phony
