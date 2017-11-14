@@ -20,7 +20,10 @@ pull:
 push: pull
 	git push --follow-tags origin master develop
 
-.PHONY: default deps build pull push
+test: build
+	$(NPM)/elm-test
+
+.PHONY: default deps build pull push test
 
 
 # Not phony
