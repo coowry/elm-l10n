@@ -2,6 +2,8 @@
 
 # Next release
 
+- Straightforward JSON encoder/decoder for countries.
+
 # 1.0.5
 
 - FractionDigits in Currency
