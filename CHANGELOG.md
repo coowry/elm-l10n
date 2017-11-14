@@ -2,6 +2,8 @@
 
 # Next release
 
+# 1.0.6
+
 - Tests added acording to https://github.com/elm-community/elm-test
     1. Run npm install -g elm-test if you haven't already.
     2. cd into the project's root directory that has your elm-package.json.
