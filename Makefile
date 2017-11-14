@@ -1,6 +1,6 @@
 NPM := node_modules/.bin
 
-default: build
+default: test
 
 deps: node_modules
 	# There are no third-party dependencies yet, skipped
